@@ -30,13 +30,18 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
+        <nav>COOL NAV BAR!!</nav>
         {this.state.advice.advice}
+        <div>
         <button onClick={this.getAdvice}>Click Here Grace!!</button>
+        </div>
+        
+
       </div>
     )
   }
 }
   
 
- 
+
