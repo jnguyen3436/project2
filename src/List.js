@@ -50,7 +50,7 @@ componentDidMount(){
             <Switch>
               <Route exact path="/country/:id" component={personDetails}/>
             </Switch>
-            {/* <CountryDetails countryInfo={this.state.countries}/> */}
+            
 
 
           </div>
