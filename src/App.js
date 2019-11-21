@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 //import GetAxios from './GetAxios'
-import {Link} from 'react-router-dom'
+import {Link,Switch,Route} from 'react-router-dom'
+import List from './List'
 export default class App extends Component {
   state ={
     advice :[],
@@ -106,14 +107,27 @@ export default class App extends Component {
            this.getInfo()
            this.getDog()
          } 
+
+         postProfile=()=>{
+          axios.post("https://ironrest.herokuapp.com/johnny/",
+          {
+            dog:this.state.dog.message,
+            firstName:this.state.info.name,
+            lastName:this.state.info.surname,
+            location:this.state.info.region,
+            advice:this.state.advice.advice,
+
+
+         })
+        }
    
 
   render() {
     return (
       <div className="App">
         <nav>Fake friend generator!!      
-        <Link to="/beers">Beers</Link>
-
+        <Link to="/list">Friends List</Link>
+        
 
         </nav>
         {/* {console.log(this.state.gif.data)}   */}
@@ -123,10 +137,14 @@ export default class App extends Component {
         <div id="name">First name :{this.state.info.name}</div>
         <div id="lastname">Last name : {this.state.info.surname}</div>
         <div id="region">From : {this.state.info.region}</div>
-        <div> Advice: {this.state.advice.advice}</div> 
+        <div id="advice"> Advice: {this.state.advice.advice}</div> 
+        <Switch>
+          <Route path= "/list" component={List} />
+          </Switch>
 
         <div>
         <button onClick={this.getAll}>Click Here !!!</button>
+        <button onClick={this.postProfile}>Add Friend!!</button>
         </div>
         
 
@@ -137,3 +155,4 @@ export default class App extends Component {
   
 
 
+//axios.delete("https://ironrest.herokuapp.com/johnny/5dd6ab64aa6dd300172da7af")
