@@ -3,35 +3,38 @@ import axios from 'axios'
 
 export default class List extends Component {
     state = {theList:[]}
-
-    getTheList =()=>{
-        axios.get("https://ih-beers-api2.herokuapp.com/beers",).then(profile=>{
+componentDidMount(){
+    
+        axios.get("https://ironrest.herokuapp.com/johnny",).then(profile=>{
           console.log(profile)
-          this.setState({theList:profile})
+          this.setState({theList:profile.data})
         })
-    }
+    
+}
     showTheList=()=>{
-        this.getTheList()
+        
       return this.state.theList.map(profile=>{
           return(
               
-              <li>
-              <h4>{profile.name}</h4>
-              <img src={profile.image_url} width="200px" alt={profile.name}/>
-              <p>{profile.description}</p>
-              </li>
+              <div>
+              <h4>{profile.firstName}  {profile.lastName}</h4>
+              <h6>{profile.location}</h6>
+              <img src={profile.dog} width="200px" alt={profile.firstName}/>
+              
+              </div>
               
           )
       })
 
     }
+    
 
   render() {
       return (
           <div>
               
               Friends
-              {this.showTheList()}
+              {this.showTheList()} 
           </div>
       )
   }
