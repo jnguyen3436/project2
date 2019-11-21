@@ -48,12 +48,7 @@ getAdvice=()=>{
         
       })
     
-}
-
-//   getAxios("https://api.giphy.com/v1/gifs/random?api_key=TdJwdGZNyu4K69K0Cha5IMjFM4LMz45L&tag=&rating=G",advice)
-    
-
-    //https://api.giphy.com/v1/gifs/random?api_key=TdJwdGZNyu4K69K0Cha5IMjFM4LMz45L&tag=&rating=G
+    }
     getGIF=()=>{
       axios.get("https://api.giphy.com/v1/gifs/random?api_key=TdJwdGZNyu4K69K0Cha5IMjFM4LMz45L&tag=&rating=G&&fixed_width").then(gif=>{
         

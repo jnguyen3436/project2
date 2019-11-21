@@ -9,13 +9,13 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="App" display="flexbox-container">
-        <nav>Fake friend generator!!      
-        <Link to="/list">Friends List </Link>
-        <Link to="/home"> Friend Generator</Link>
-        
+      <div className="App">
 
-        </nav>
+
+        <nav  className="navbar navbar-light" >Fake friend generator!!      
+        <Link to="/list" color="white">Friends List </Link>
+        <Link to="/home"> Friend Generator</Link>
+         </nav>
         
         
         <Switch>
