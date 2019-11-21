@@ -21,36 +21,12 @@ componentDidMount(){
         .catch(err => {
             console.log(err)
         })
-    //     .then(profile=>{
-    //       console.log(profile)
-        //   this.setState({theList:profile.data})
-    // }}
-        //     ,()=>{
-        //       console.log("the list")
-        //       console.log(this.state.theList)
-        //       let test = this.state.theList.map(person => 
-        //           person.firstName + " " + person.lastName
-        //       )
-        //       console.log(test)
-        //       return test
-              
-        //   })
-       // }
+    
         
 }
 
 
-    // showTheList=()=>{
-    //   return this.state.theList.map(profile=>{
-    //       return(
-              
-    //     <Link className="list-group-item list-group-item-action" key={i} to={`/list/${profile.id}`}> 
-    //           {profile.firstName}  
-    //     </Link>
-    //       )
-    //   })
-
-    // }
+   
 
     showTheList = () => {
         const fullList = this.state.theList.map((profile) => {
@@ -87,7 +63,7 @@ componentDidMount(){
 
 
             <Switch>
-              <Route exact path="/country/:id" component={profile}/>
+              <Route exact path="/list/:id" component={profile}/>
             </Switch>
             {/* <CountryDetails countryInfo={this.state.countries}/> */}
 
