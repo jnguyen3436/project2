@@ -10,14 +10,29 @@ export default class List extends Component {
           this.setState({theList:profile})
         })
     }
-    showList=()=>{
+    showTheList=()=>{
+        this.getTheList()
+      return this.state.theList.map(profile=>{
+          return(
+              
+              <li>
+              <h4>{profile.name}</h4>
+              <img src={profile.image_url} width="200px" alt={profile.name}/>
+              <p>{profile.description}</p>
+              </li>
+              
+          )
+      })
 
     }
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+
+  render() {
+      return (
+          <div>
+              
+              Friends
+              {this.showTheList()}
+          </div>
+      )
+  }
 }

@@ -3,6 +3,7 @@ import axios from 'axios'
 //import GetAxios from './GetAxios'
 import {Link,Switch,Route} from 'react-router-dom'
 import List from './List'
+import Home from "./Home"
 export default class App extends Component {
   state ={
     advice :[],
@@ -127,6 +128,7 @@ export default class App extends Component {
       <div className="App">
         <nav>Fake friend generator!!      
         <Link to="/list">Friends List</Link>
+        <Link to="/#">Home</Link>
         
 
         </nav>
@@ -138,15 +140,16 @@ export default class App extends Component {
         <div id="lastname">Last name : {this.state.info.surname}</div>
         <div id="region">From : {this.state.info.region}</div>
         <div id="advice"> Advice: {this.state.advice.advice}</div> 
-        <Switch>
-          <Route path= "/list" component={List} />
-          </Switch>
 
         <div>
         <button onClick={this.getAll}>Click Here !!!</button>
         <button onClick={this.postProfile}>Add Friend!!</button>
         </div>
         
+        <Switch>
+          <Route path= "/#" component={Home}/>
+          <Route path= "/list" component={List} />
+          </Switch>
 
       </div>
     )
