@@ -17,10 +17,12 @@ componentDidMount(){
           return(
               
               <div>
+                  <div>-----------------------------------------------</div>
+              <img src={profile.dog} width="200px" alt={profile.firstName}/>
               <h4>{profile.firstName}  {profile.lastName}</h4>
               <h6>{profile.location}</h6>
-              <img src={profile.dog} width="200px" alt={profile.firstName}/>
-              
+              <h5>{profile.advice}</h5>
+                  <div>-----------------------------------------------</div>
               </div>
               
           )

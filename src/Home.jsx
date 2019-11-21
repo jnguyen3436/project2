@@ -18,11 +18,11 @@ export default class Home extends Component {
           this.setState({advice:advice.data.slip})
           
           console.log(advice.data.slip)
-        
+            this.getGIF()
           
         })
     
-        axios.get("https://api.giphy.com/v1/gifs/random?api_key=TdJwdGZNyu4K69K0Cha5IMjFM4LMz45L&tag=&rating=G").then(gif=>{
+        axios.get("https://api.giphy.com/v1/gifs/random?api_key=TdJwdGZNyu4K69K0Cha5IMjFM4LMz45L&tag=&rating=r").then(gif=>{
             this.setState({gif:gif.data})
             
             console.log(this.state.gif)
@@ -76,10 +76,11 @@ getAdvice=()=>{
     //https://api.giphy.com/v1/gifs/random?api_key=TdJwdGZNyu4K69K0Cha5IMjFM4LMz45L&tag=&rating=G
     getGIF=()=>{
       axios.get("https://api.giphy.com/v1/gifs/random?api_key=TdJwdGZNyu4K69K0Cha5IMjFM4LMz45L&tag=&rating=G").then(gif=>{
-        this.setState({gif:gif.data.url})
         
-        console.log(gif.data.url)
-       
+        this.setState({gif:gif.data.data.image_url})
+        
+          console.log(gif, gif.data.data.url)
+        //debugger
        })
         
       }
@@ -111,6 +112,7 @@ getAdvice=()=>{
            this.getAdvice()
            this.getInfo()
            this.getDog()
+           this.getGIF()
          } 
 
          postProfile=()=>{
@@ -130,8 +132,13 @@ getAdvice=()=>{
   render() {
     return (
       <div className="Home">
-        
-        {/* {console.log(this.state.gif.data)}   */}
+          {/* {this.state.gif} */}
+          <img src={this.state.gif} alt = "thegif"/>
+
+          {/* <img src="https://media0.giphy.com/media/oFyd7sK3xi0SpUzRIV/giphy.gif" /> */}
+          {/* <iframe src={this.state.gif} width="480" height="275" frameBorder="0" /> */}
+        {/* <img src={this.state.gif} /> */}
+        {/* {console.log(this.stae.gift.data)}   */}
         {/* {this.state.gif && <img src={this.state.gif.data.embed_url} alt ="gif"/>} */}
         
         <img id="dog" height ="300px" src={this.state.dog.message} alt ="doggo"/>
