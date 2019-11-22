@@ -16,6 +16,7 @@ componentDidMount(){
             console.log(data)
             this.setState({theList: data.data},()=>{
                 console.log(this.state.theList)
+                //this.postTheList()
             })
         })
         .catch(err => {
@@ -24,6 +25,13 @@ componentDidMount(){
     
         
 }
+
+postTheList=()=>{
+    axios.post("https://ironrest.herokuapp.com/johnny",{daBaby:this.state.theList})
+     
+     
+      
+    }
 
 
    

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import theList from './List'
+import axios from "axios"
 
 class profile extends Component {
     
@@ -9,6 +10,16 @@ class profile extends Component {
             return aCountry._id === id
         })
     }
+
+    getInfo=()=>{
+        axios.get("https://uinames.com/api/").then(info=>{
+          this.setState({info:info.data})
+          
+          console.log(this.state.info)
+         
+         })
+          
+        }
 
    
 
