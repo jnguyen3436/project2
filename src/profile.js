@@ -3,6 +3,10 @@ import theList from './List'
 import axios from "axios"
 
 class profile extends Component {
+    state={
+        info:[]
+    }
+    
     
 
     findCountry = (id) => {
@@ -12,7 +16,8 @@ class profile extends Component {
     }
 
     getInfo=()=>{
-        axios.get("https://uinames.com/api/").then(info=>{
+        axios.get("https://ironrest.herokuapp.com/findOne/johnny?key=dababy").then(info=>{
+            console.log(info)
           this.setState({info:info.data})
           
           console.log(this.state.info)
