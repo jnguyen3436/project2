@@ -22,7 +22,7 @@ export default class App extends Component {
         
         <Switch>
           <Route path= "/home" component={Home}/>
-          <Route path= "/home" component={Friend}/>
+          <Route path= "/friend" component={Friend}/>
           <Route path= "/list" component={List} />
           </Switch>
 
