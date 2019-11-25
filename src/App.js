@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-
+import './App.css';
 import {Link,Switch,Route} from 'react-router-dom'
 import List from './List'
 import Home from "./Home"
@@ -33,4 +33,4 @@ export default class App extends Component {
   
 
 
-axios.post("https://ironrest.herokuapp.com/createCollection/grant")
+axios.delete("https://ironrest.herokuapp.com/johnny/5dd6b3ecaa6dd300172da7c6")

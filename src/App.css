@@ -1,5 +1,7 @@
-App {
+
+.App {
   text-align: center;
+  background-color: wheat;
 }
 
 .App-logo {
@@ -23,9 +25,9 @@ App {
 .nav{
 text-emphasis-color:white;
 background-color:#e3f2fd;
-}
+}s
 
-.a {
+.navbar navbar-light {
   color: white;
   text-decoration: none;
   background-color: transparent;

@@ -23,6 +23,7 @@ componentDidMount(){
               <h6>{profile.location}</h6>
               <h5>{profile.advice}</h5>
                     <img src={profile.gif} alt={profile._url}/>
+                    <button onClick={this.removeFriend} >Remove Friend :c</button>
                   <div>-----------------------------------------------</div>
               </div>
               
