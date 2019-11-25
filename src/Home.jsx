@@ -121,7 +121,7 @@ getAdvice=()=>{
         <div id="advice"> Advice: {this.state.advice.advice}</div> 
 
         <div>
-        <button onClick={this.getAll}>Click Here !!!</button>
+        <button onClick={this.getAll}>New Friend !!!</button>
         <button onClick={this.postProfile}>Add Friend!!</button>
         </div>
         
