@@ -24,3 +24,12 @@ App {
 text-emphasis-color:white;
 background-color:#e3f2fd;
 }
+
+.a {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
+.navbar navbar-light{
+  color:white;
+}

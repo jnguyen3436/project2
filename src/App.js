@@ -4,6 +4,7 @@ import axios from 'axios'
 import {Link,Switch,Route} from 'react-router-dom'
 import List from './List'
 import Home from "./Home"
+import Friend from "./Friend"
 export default class App extends Component {
  
 
@@ -13,13 +14,15 @@ export default class App extends Component {
 
 
         <nav  className="navbar navbar-light" >Fake friend generator!!      
-        <Link to="/list" color="white">Friends List </Link>
+        <Link to="/list" className="a" color="white">Friends List </Link>
+        <Link to="/friend">Create a Friend</Link>
         <Link to="/home"> Friend Generator</Link>
          </nav>
         
         
         <Switch>
           <Route path= "/home" component={Home}/>
+          <Route path= "/home" component={Friend}/>
           <Route path= "/list" component={List} />
           </Switch>
 

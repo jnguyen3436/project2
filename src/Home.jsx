@@ -102,6 +102,8 @@ getAdvice=()=>{
 
 
          })
+         window.alert("Friend Added");
+         this.getAll();
         }
    
 
