@@ -5,6 +5,7 @@ import {Link,Switch,Route} from 'react-router-dom'
 import List from './Components/List'
 import Home from "./Components/Home"
 import Friend from "./Components/Friend"
+import Landing from "./Components/Landing"
 export default class App extends Component {
  
 
@@ -21,6 +22,7 @@ export default class App extends Component {
         
         
         <Switch>
+          <Route path= "/" component={Landing}/>
           <Route path= "/home" component={Home}/>
           <Route path= "/friend" component={Friend}/>
           <Route path= "/list" component={List} />
