@@ -5,7 +5,7 @@ import axios from 'axios'
 
 
 
-export default class Home extends Component {
+export default class Generator extends Component {
     state ={
         advice :[],
         gif:null,
@@ -54,7 +54,7 @@ getAdvice=()=>{
         
         this.setState({gif:gif.data.data.image_url})
         
-          console.log(gif, gif.data.data.url)
+          //console.log(gif, gif.data.data.url)
         
        })
         
