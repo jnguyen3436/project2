@@ -15,10 +15,10 @@ export default class App extends Component {
 
 
         <nav  className="navbar navbar-light" >
-        <Link to="/home">Fake friend generator!!</Link>  
-        <Link to="/list" className="a" color="white">Friends List </Link>
-        <Link to="/friend">Create a Friend</Link>
-        <Link to="/generator"> Friend Generator</Link>
+        <Link style={{color:'white'}} to="/home">Fake friend generator!!</Link>  
+        <Link style={{color:'white'}} to="/list" className="a" color="white">Friends List </Link>
+        <Link style={{color:'white'}} to="/friend">Create a Friend</Link>
+        <Link style={{color:'white'}} to="/generator"> Friend Generator</Link>
          </nav>
         
         
@@ -36,4 +36,4 @@ export default class App extends Component {
   
 
 
-axios.delete("https://ironrest.herokuapp.com/johnny/5dd6b3ecaa6dd300172da7c6")
+axios.delete("https://ironrest.herokuapp.com/johnny/5ddd5e54b23a8d0017ac07bd")

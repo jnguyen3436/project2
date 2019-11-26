@@ -6,6 +6,7 @@ export default class Friend extends Component {
     state ={
         firstName:null,
         lastName:null,
+        location:null,
         advice:null,
         dog:null,
         gif:null,
@@ -81,19 +82,27 @@ export default class Friend extends Component {
       }
 
       postProfile=()=>{
+          
         axios.post("https://ironrest.herokuapp.com/johnny/",
         {
-          dog:this.state.dog,
-          firstName:this.state.firstName,
-          lastName:this.state.lastName,
-          location:this.state.location,
-          advice:this.state.advice,
+            dog:this.state.dog,
+            firstName:this.state.firstName,
+            lastName:this.state.lastName,
+            location:this.state.location,
+            advice:this.state.advice,
           gif:this.state.gif
 
 
        })
        window.alert("Friend Added");
-       
+       this.setState({
+        firstName:null,
+        lastName:null,
+        location:null,
+        advice:null,
+        dog:null,
+        gif:null,
+      });
       }
 
 
@@ -102,11 +111,11 @@ export default class Friend extends Component {
             <div>
                 <form>
                     <input id="firstName" type="text" placeholder="First Name" onChange={this.handleChange}/>
-                    <input id="lastName" type="text" placeholder="Last Name"/>
-                    <input id="location" type="text" placeholder="Location"/>
-                    <input id="advice"type="text" placeholder="Advice"/>
-                    <input id="dog"type="text" placeholder="Image URL"/>
-                    <input id="gif"type="text" placeholder="GIPHY Gif URL"/>
+                    <input id="lastName" type="text" placeholder="Last Name" onChange={this.handleChange}/>
+                    <input id="location" type="text" placeholder="Location" onChange={this.handleChange}/>
+                    <input id="advice"type="text" placeholder="Advice" onChange={this.handleChange}/>
+                    <input id="dog"type="text" placeholder="Image URL" onChange={this.handleChange}/>
+                    <input id="gif"type="text" placeholder="GIPHY Gif URL" onChange={this.handleChange}/>
                     <input type="submit" value="Submit when done" onClick={this.postProfile}/>
                 </form>
                 helo
