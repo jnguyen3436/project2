@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import './App.css';
 import {Link,Switch,Route} from 'react-router-dom'
-import List from './List'
-import Home from "./Home"
-import Friend from "./Friend"
+import List from './Components/List'
+import Home from "./Components/Home"
+import Friend from "./Components/Friend"
 export default class App extends Component {
  
 

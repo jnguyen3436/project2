@@ -16,7 +16,7 @@ componentDidMount(){
       return this.state.theList.map(profile=>{
           return(
               
-              <div>
+              <div key={profile._id}>
                   <div>-----------------------------------------------</div>
               <img src={profile.dog} width="200px" alt={profile.firstName}/>
               <h4>{profile.firstName}  {profile.lastName}</h4>
@@ -30,6 +30,12 @@ componentDidMount(){
           )
       })
 
+    }
+
+    removeFriend=()=>{
+        //console.log(this.profile.key)
+        window.alert("This feature isn't working right now, stay posted for future updates!")
+        //axios.delete(`https://ironrest.herokuapp.com/johnny/${this.profile._id}`)
     }
     
 
