@@ -15,7 +15,7 @@ export default class App extends Component {
 
 
         <nav  className="navbar navbar-light" >
-        <Link to="/">Fake friend generator!!</Link>  
+        <Link to="/home">Fake friend generator!!</Link>  
         <Link to="/list" className="a" color="white">Friends List </Link>
         <Link to="/friend">Create a Friend</Link>
         <Link to="/generator"> Friend Generator</Link>
@@ -23,7 +23,7 @@ export default class App extends Component {
         
         
         <Switch>
-          <Route path= "/" component={Landing}/>
+          <Route path= "/home" component={Landing}/>
           <Route path= "/generator" component={Generator}/>
           <Route path= "/friend" component={Friend}/>
           <Route path= "/list" component={List} />
