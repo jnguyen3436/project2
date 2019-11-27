@@ -25,7 +25,7 @@ componentDidMount(){
             //   <h6>{profile.location}</h6>
             //   <h5>{profile.advice}</h5>
             //     <img src={profile.gif} alt={profile._url}/>
-            //     <p style={{display:'none'}} className="bob">{profile._id}</p>
+            //     <p style={{display:'none'}} classNameName="bob">{profile._id}</p>
             //         <button onClick={this.removeFriend} >Remove Friend :c</button>
             //       <div>-----------------------------------------------</div>
             //   </div>
@@ -33,16 +33,20 @@ componentDidMount(){
 
 
 
-              <div class="col-lg-4 col-sm-6 mb-4">
-              <div class="card h-100">
-                <img class="card-img-top" src={profile.dog}  alt="blah"/>
-                <div class="card-body">
-                  <h4 class="card-title">
+              <div className="col-lg-4 col-sm-6 mb-4" id={i} key={profile._id}>
+              <div className="card h-100">
+                <img className="card-img-top" src={profile.dog} width='60%' height='60%' alt="blah"/>
+                <div className="card-body">
+                  <h4 className="card-title">
                     <p>{profile.firstName} {profile.lastName}</p>
                   </h4>
-                  <p class="card-text">{profile.advice}</p>
+                    <h5>{profile.location}</h5>
+                  <p className="card-text">{profile.advice}</p>
+                  <img src={profile.gif} width='60%' height='60%' alt="thegif"/>
                 </div>
+                
               </div>
+                  <button onClick={this.removeFriend} >Remove Friend :c</button>
               </div>
            
           )
@@ -81,14 +85,14 @@ componentDidMount(){
       return (
 
         
-<div class="container">
+<div className="container">
 
   
-  <h1 class="my-4">Page Heading
-    <small>Secondary Text</small>
+  <h1 className="my-4">Friends List
+    <small>...just fyi they're not real</small>
   </h1>
 
-  <div class="row">
+  <div className="row">
    
   {this.showTheList()} 
   </div>
