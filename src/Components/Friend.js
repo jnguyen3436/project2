@@ -95,20 +95,21 @@ export default class Friend extends Component {
 
        })
        window.alert("Friend Added");
-       this.setState({
-        firstName:null,
-        lastName:null,
-        location:null,
-        advice:null,
-        dog:null,
-        gif:null,
-      });
+    //    this.setState({
+    //     firstName:null,
+    //     lastName:null,
+    //     location:null,
+    //     advice:null,
+    //     dog:null,
+    //     gif:null,
+    //   });
       }
 
 
     render() {
         return (
             <div>
+                <h3>Create Your Friend!</h3>
                 <form>
                     <input id="firstName" type="text" placeholder="First Name" onChange={this.handleChange}/>
                     <input id="lastName" type="text" placeholder="Last Name" onChange={this.handleChange}/>
@@ -118,7 +119,7 @@ export default class Friend extends Component {
                     <input id="gif"type="text" placeholder="GIPHY Gif URL" onChange={this.handleChange}/>
                     <input type="submit" value="Submit when done" onClick={this.postProfile}/>
                 </form>
-                helo
+                
             </div>
         )
     }

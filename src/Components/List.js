@@ -16,15 +16,16 @@ componentDidMount(){
     showTheList=()=>{
         
       return this.state.theList.map((profile, i)=>{
-          console.log(i)
+          //console.log(i)
           return(  
-              <div id = {i}>
+              <div id = {i} key={profile._id}>
                   <div>-----------------------------------------------</div>
               <img src={profile.dog} width="200px" alt={profile.firstName}/>
               <h4>{profile.firstName}  {profile.lastName}</h4>
               <h6>{profile.location}</h6>
               <h5>{profile.advice}</h5>
-                    <img src={profile.gif} alt={profile._url}/>
+                <img src={profile.gif} alt={profile._url}/>
+                <p style={{display:'none'}} className="bob">{profile._id}</p>
                     <button onClick={this.removeFriend} >Remove Friend :c</button>
                   <div>-----------------------------------------------</div>
               </div>
@@ -33,11 +34,11 @@ componentDidMount(){
       })
 
     }
-
+    
     removeFriend=(e)=>{
         // let copyList = [...this.state.theList]
         let index = e.target.parentElement.id
-        
+        console.log(e.target.parentElement)
         let copy = [...this.state.theList]
 
         copy.splice(index, 1)
