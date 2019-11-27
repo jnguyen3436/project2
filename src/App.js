@@ -9,7 +9,13 @@ import Landing from "./Components/Landing"
 import Navbar from 'react-bootstrap/Navbar'
 import { Button,Form,FormControl } from 'react-bootstrap'
 import {Nav} from 'react-bootstrap'
+import './logo.svg'
+
 export default class App extends Component {
+
+  notify=()=>{
+    window.alert("This feature isn't working right now, stay posted for future updates!")
+}
  
 
   render() {
@@ -17,7 +23,15 @@ export default class App extends Component {
       <div className="App">
 
 <Navbar bg="light" variant="light">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Navbar.Brand href="#home">
+    <img
+        alt=""
+        src="/logo.svg"
+        width="30"
+        height="30"
+        className="d-inline-block align-top"
+      />{' '}
+      Home</Navbar.Brand>
     <Nav className="mr-auto">
       
       <Nav.Link href="#list">Friends List</Nav.Link>
@@ -26,7 +40,7 @@ export default class App extends Component {
     </Nav>
     <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-primary">Search</Button>
+      <Button variant="outline-primary" onClick={this.notify}>Search</Button>
     </Form>
   </Navbar>
 

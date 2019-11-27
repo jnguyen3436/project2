@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import './Landing.css'
 
 export default class Landing extends Component {
+
+    notify=()=>{
+        window.alert("This feature isn't working right now, stay posted for future updates!")
+    }
     render() {
         return (
             <div class="container-fluid">
@@ -28,7 +32,7 @@ export default class Landing extends Component {
                   <input type="checkbox" class="custom-control-input" id="customCheck1"/>
                   <label class="custom-control-label" for="customCheck1">Remember password</label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" onClick="" >Sign in</button>
+                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" onClick={this.notify} >Sign in</button>
                 <div class="text-center">
                   <a class="small" href="#home">Forgot password?</a></div>
               </form>
